@@ -34,7 +34,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -54,7 +54,7 @@ group :test do
   gem 'capybara', '1.1.2'
   gem 'rb-fsevent'
 
-# gem 'guard-spork'
+  #gem 'guard-spork'
   gem 'fuubar'
   gem 'ruby_gntp'
   gem 'launchy'

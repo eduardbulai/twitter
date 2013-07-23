@@ -205,7 +205,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt-ruby (~> 3.0.0)
+  bcrypt-ruby
   bootstrap-sass (~> 2.3.2.1)
   capistrano
   capybara (= 1.1.2)
