@@ -97,3 +97,17 @@ p {
 	font-size: 1.1em;
 	line-height: 1.7em;
 }
+
+#logo {
+	float: left;
+	margin-bottom: 10px;
+	font-size: 1.7em;
+	letter-spacing: -1px;
+	padding-top: 9px;
+	font-weight: 1;
+	font-family: "PT Sans";
+	& :hover {
+	color: #fff;
+	text-decoration: none;
+	}
+}
