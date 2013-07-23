@@ -10,15 +10,20 @@
   <%= render 'layouts/shim' %>
 </head>
   <body>
-    <div class="wrapper"><%= render 'layouts/header' %>
+  <!-- Part I: Wrap all page content -->
+    <div id="wrap">
+      <!-- Fixed navbar -->
+      <%= render 'layouts/header' %>
+      <!-- Content -->
       <div class="container">
         <% flash.each do |key, value| %>
         <div class="alert alert-<%= key %>"><%= value %></div>
         <% end %>
         <%= yield %>
-        <div id="push"></div>
       </div>
+      <div id="push"></div>
     </div>
+  <!-- Part II: Footer -->
     <%= debug(params) if Rails.env.development? %>
     <%= render 'layouts/footer' %>
   </body>
