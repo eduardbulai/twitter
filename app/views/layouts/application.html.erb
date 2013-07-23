@@ -3,12 +3,22 @@
 <head>
   <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 </head>
-<body>
-
-<%= yield %>
-
-</body>
+  <body>
+    <div class="wrapper"><%= render 'layouts/header' %>
+      <div class="container">
+        <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+        <%= yield %>
+        <div id="push"></div>
+      </div>
+    </div>
+    <%= render 'layouts/footer' %>
+  </body>
 </html>
