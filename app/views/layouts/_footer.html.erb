@@ -1,8 +1,13 @@
 <footer class="footer">
   <div class="container">
-    <ul class="nav nav-pills">
-      <li><%= link_to   "Help",    help_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
-    </ul>
+    <div class="span3"><h5><%= link_to   "About",     about_path %></h5>
+      <a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010">Finn Årup Nielsen's list<br>
+      <a href="https://dev.twitter.com/status">Twitter API status<br>
+    </div>
+    <div class="span3"><h5><%= link_to "Contact", contact_path %></h5>
+      <a href="http://twitter.com/enddynayn/">Enddy</a> on Twitter<br>
+      <a href="http://twitter.com/machikoyasuda/">Machiko</a> on Twitter<br>
+    </div>
+    <div class="span3"><p>Hand-crafted in Los Angeles</p></div>
   </div>
 </footer>
