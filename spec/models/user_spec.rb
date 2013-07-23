@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe User do
+<<<<<<< HEAD
   
   before { @user = User.new(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar") }
 
@@ -98,3 +99,19 @@ describe User do
 end
 
 
+=======
+  before do
+    @user = User.new(name: "Example User", email: "user@example.com", salt: "123123123123", fish:"123123123123")
+  end
+
+  subject { @user } # set it to @user
+
+  it { should respond_to (:name) }
+  it { should respond_to (:email) }
+  it { should be_valid }
+
+  # expect(subject.salt).not_to be_nil
+  # expect(subject.fish).not_to be_nil
+
+end
+>>>>>>> 467c756afe44ee67953b48f038c69514065c498c
