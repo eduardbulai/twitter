@@ -36,6 +36,10 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby'
 
+# Twitter Streaming gems
+gem 'em-http'
+gem 'json'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
