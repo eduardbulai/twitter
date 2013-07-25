@@ -37,8 +37,9 @@ end
 gem 'bcrypt-ruby'
 
 # Twitter Streaming gems
-gem 'em-http'
+gem 'eventmachine'
 gem 'json'
+gem 'em-http-request'
 
 # Use unicorn as the app server
 # gem 'unicorn'
