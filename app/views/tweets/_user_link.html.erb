@@ -1,0 +1,5 @@
+<%= link_to tweet.user.screen_name, tweet_path(tweet.user.id),
+            rel: "popover",
+            data: { title: tweet.user.screen_name,
+                    content: raw(CGI::escapeHTML render("user_info", :user => tweet.user)),
+                    trigger: "hover", html: true } %>

@@ -1,0 +1,22 @@
+<%= form_tag tweets_path, :method => :get, :class => "form-search text-center" do %>
+  <div class="input-append">
+    <h4 class="heading">Search for:</h4>
+    <%= text_field_tag :q, params[:q], :class => "search-query" %>
+    <%= button_tag "Go!", :type => "submit", :class => "btn btn-medium" %>
+  </div>
+  <%= render "shared/search_operators" %>
+<% end %>
+
+<!-- <table id="tweets" class="table table-striped table-bordered table-hover">
+  <% @tweets.each do |tweet| %>
+    <tr>
+      <td><%= tweet.created_at.to_s(:short) %></td>
+      <td>
+        <%= render 'user_link', :tweet => tweet %>
+      </td>
+      <td><%= linkify highlight(tweet, params[:q]) %></td>
+    </tr>
+  <% end %>
+</table> -->
+
+<div> <%= @newarray%> </div>
