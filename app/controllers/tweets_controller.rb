@@ -32,19 +32,4 @@ class TweetsController < ApplicationController
 
   end
 
-  def csv_push
-    CSV.foreach("file.csv", "wb") do |csv|
-      csv << [@array]
-    end
-  end
-
-  # def show
-  #   user = if params[:id].starts_with? "@"
-  #            params[:id][1..-1]
-  #          else
-  #            params[:id].to_i
-  #          end
-
-  #   @tweets = Twitter.user_timeline(user)
-  # end
 end
