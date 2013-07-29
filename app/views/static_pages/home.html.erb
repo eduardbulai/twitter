@@ -2,8 +2,26 @@
   <h1>How are you, Twitter?</h1>
 
   <h2>Mine today's tweets to measure how people around the country feel right now.</h2>
-  <form class="form-search">
-    <input type="text" class="input-large search-query">
-    <button class="btn btn-info" type="button">Search</button>
-  </form>
+
+  <%= form_tag tweets_path, :method => :get, :class => "form-search text-center" do %>
+  <div class="input-append">
+<!--     <h4 class="heading">Search tweets now:</h4>
+ -->    <%= text_field_tag :q, params[:q], :class => "search-query" %>
+    <%= button_tag "Go!", :type => "submit", :class => "btn btn-medium" %>
+  </div>
+  <% end %>
+  <div class="row-fluid">
+    <div class="span4 well">
+      <p class="lead">Step 1: Input search term<br><br><br></p>
+    </div>
+
+    <div class="span4 well">
+    <p class="lead">Step 2: Get a visualization of the most recent tweets with that word, and how people feel</p>
+    </div>
+
+    <div class="span4 well">
+    <p class="lead">Step 3: Take your data and visualization to go.<br><br></p>
+    </div>
+  </div>
+
 </div>

@@ -12,8 +12,6 @@ class TweetsController < ApplicationController
       @array_tweets << t.text
     end
 
-
-
     # combine array into long string of all tweets
     # TODO: remove symbols, punctuation, https
     @words = @array_tweets.join(" ")
@@ -29,6 +27,8 @@ class TweetsController < ApplicationController
     @freqs.each do |k, v|
       Query.create word: k, frequency: v
     end
+
+    @afinn = Words.all
 
   end
 
