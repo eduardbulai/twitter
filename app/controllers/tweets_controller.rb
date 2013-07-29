@@ -28,4 +28,5 @@ class TweetsController < ApplicationController
 
     @database = Tweet.all
   end
+
 end

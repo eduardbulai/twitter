@@ -1,0 +1,10 @@
+
+<table id="tweets" class="table table-striped table-bordered table-hover">
+  <% @tweets.each do |tweet| %>
+    <tr>
+      <td><%= tweet.created_at.to_s(:short) %></td>
+      <td><%= render 'user_link', :tweet => tweet %></td>
+      <td><%= linkify tweet %></td>
+    </tr>
+  <% end %>
+</table>
