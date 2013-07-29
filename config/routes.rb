@@ -1,8 +1,8 @@
 Twitter::Application.routes.draw do
-  get "queries/new"
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-
+  resources :queries, only: [:new, :create, :destroy]
   root to: 'static_pages#home'
 
   match '/signup',  to: 'users#new',            via: 'get'
