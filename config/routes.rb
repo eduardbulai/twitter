@@ -1,4 +1,5 @@
 Twitter::Application.routes.draw do
+  get "queries/new"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
