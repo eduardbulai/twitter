@@ -101,6 +101,7 @@ describe User do
     before { @user.save }
     it { expect(@user.remember_token).not_to be_blank }
   end
+  
 end
 
 

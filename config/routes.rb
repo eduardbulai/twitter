@@ -4,9 +4,9 @@ Twitter::Application.routes.draw do
   
   root to: 'static_pages#home'
 
-  get '/signup',  to: 'users#new', 			via: 'get'
-  get '/signin',  to: 'sessions#new', 		via: 'get'
-  get '/signout', to: 'sessions#destroy', 	via: 'delete'
+  match '/signup',  to: 'users#new',            via: 'get'
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
 
   get '/help', 		to: 'static_pages#help'
   get '/about', 	to: 'static_pages#about'
