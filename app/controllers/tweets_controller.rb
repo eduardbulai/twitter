@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
   DEFAULT_SEARCH = "@GA"
   LANG = 'en'
 
-  def index
+  def new
     @tweets = Twitter.search(params[:q] ||= DEFAULT_SEARCH, :count => MAX_TWEETS, :lang =>LANG).results
 
     # Array of search query tweets
