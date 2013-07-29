@@ -23,10 +23,10 @@ class TweetsController < ApplicationController
 
     # Save frequency of words into database
     @freqs.each do |k, v|
-      Tweet.create word: k.downcase, frequency: v
+      Query.create word: k.downcase, frequency: v
     end
 
-    @database = Tweet.all
+    @database = Query.all
   end
 
 end
