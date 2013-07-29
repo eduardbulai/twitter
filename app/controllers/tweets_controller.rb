@@ -1,35 +1,32 @@
 class TweetsController < ApplicationController
 
-  MAX_TWEETS = 1000
+  MAX_TWEETS = 20
   DEFAULT_SEARCH = "@GA"
-  LANGUAGE = "en"
+  LANG = 'en'
 
   def index
-    @tweets = Twitter.search(params[:q] ||= DEFAULT_SEARCH, :count => MAX_TWEETS, :lang => LANGUAGE).results
+    @tweets = Twitter.search(params[:q] ||= DEFAULT_SEARCH, :count => MAX_TWEETS, :lang =>LANG).results
 
+    # Array of search query tweets
     @array_tweets = []
-    @tweets.each do |t|
-      @array_tweets << t.text
+    @tweets.each do |tweet|
+    	@array_tweets << tweet.text
     end
 
-    # combine array into long string of all tweets
-    # TODO: remove symbols, punctuation, https
+    # Filters the tweet query, removes symbols
     @words = @array_tweets.join(" ")
+    @clean_words = @words.downcase.split(/\W+/)
 
-    # split string into words, ignores non-words
-    @array_words = @words.split(/\W+/)
-
+    # Count frequency of words and put into @freqs hash
     @freqs = Hash.new(0)
-    @array_words.each { |word| @freqs[word] += 1 }
-    # return hash, named @freqs, with word frequency
+    @clean_words.each { |w| @freqs[w] += 1 }
 
-    # add "word" and "frequency" to database
+    # Save frequency of words into database
     @freqs.each do |k, v|
-      Query.create word: k, frequency: v
+      Tweet.create word: k.downcase, frequency: v
     end
 
-    @afinn = Words.all
-
+    @database = Tweet.all
   end
 
 end
