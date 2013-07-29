@@ -12,6 +12,7 @@
           <ul class ="nav pull-right">
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Help", help_path   %></li>
+
             <% if signed_in? %>
             <li><%= link_to "Users", '#' %></li>
             <li id="fat-menu" class="dropdown">
@@ -29,9 +30,13 @@
             </li>
           <% else %>
             <li><%= link_to "Sign in", signin_path %></li>
+            <li><%= link_to "Register", new_user_path %></li>
+
           <% end %>
         </ul>
-      </nav>
+    
+        </nav>
+      </div>
     </div>
   </div>
 </header>
