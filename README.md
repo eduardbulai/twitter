@@ -67,7 +67,7 @@ After we have a test Ruby script and test visualization script, we can start bui
 
 ## Breaking it down: for the User
 
-**MINIMUM VIABLE PRODUCT: **
+**MINIMUM VIABLE PRODUCT:**
 - A user will be able to enter a search query and submit it.
 - A user will to choose start and end date and optional parameters, like location. 
 - Display a static bubble chart of the top words in tweets that have the word “Lakers” in it -- and then, color them by sentiment & size the bubbles by frequency. User can save the chart as PNG or share it online. 
