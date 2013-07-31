@@ -22,17 +22,10 @@ AFINN is a list of English words rated for valence with an integer between minus
 Others http://blog.mashape.com/post/48757031167/list-of-16-sentiment-analysis-apis
 
 Use cases:
-- http://www.cs.washington.edu/education/courses/cse190p/12su/homework/hw5/homework5.html (compare NYC or CA, who Tweets about being happier or sadder?)
-- https://election.twitter.com/ (real-time election stats comparisons - which candidate has more buzz?)
-- http://jeffreybreen.wordpress.com/2011/07/04/twitter-text-mining-r-slides/
-(Text-mining Tweets and comparing it with airline sentiments and ratings - does Twitter sentiment correlate with airline satisfaction ratings?)
-http://ny.spatial.ly/ (What languages are people Tweeting in - in a city?)
-https://code.google.com/p/otterapi/wiki/UsesOtter
-
-
-More tools
-Topsy API http://about.topsy.com/products/api/overview/
-
+- Compare NYC or CA, who tweets about being happier or sadder? http://www.cs.washington.edu/education/courses/cse190p/12su/homework/hw5/homework5.html 
+- Real-time election stats https://election.twitter.com/ 
+- Text-mining tweets http://jeffreybreen.wordpress.com/2011/07/04/twitter-text-mining-r-slides/
+- Foreign languages in the city http://ny.spatial.ly/ 
 
 ----------------------------------------
 
@@ -57,7 +50,7 @@ After that, we will start testing our Ruby script on test data sets so we can ge
 - Run the script on the test data, and return a CSV of words and frequency
 - Put that CSV into D3 and Start learning D3 to play around with various static and/or interactive visualization options.
 
-Goal: test the Ruby script, test a D3 visualization script
+**Goal**: test the Ruby script, test a D3 visualization script
 
 ----------------------------------------
 
@@ -74,12 +67,12 @@ After we have a test Ruby script and test visualization script, we can start bui
 
 ## Breaking it down: for the User
 
-MINIMUM VIABLE PRODUCT: 
+**MINIMUM VIABLE PRODUCT: **
 - A user will be able to enter a search query and submit it.
 - A user will to choose start and end date and optional parameters, like location. 
 - Display a static bubble chart of the top words in tweets that have the word “Lakers” in it -- and then, color them by sentiment & size the bubbles by frequency. User can save the chart as PNG or share it online. 
 
-OPTIONAL FUNCTIONS:
+**OPTIONAL FUNCTIONS:**
 - Display an interactive bubble chart of the top words in tweets that have the word “Lakers” in it. Filter by parameters, like jQuery slider by time.
 
 ----------------------------------------
