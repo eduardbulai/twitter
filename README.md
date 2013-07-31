@@ -102,7 +102,7 @@ Example: What words are most popularly tweeted during a NBA Finals game? How hap
 
 Example: On Election day, compare tweets and sentiments as election results are reported. 
 
-# Things to keep in mind: 
+#### Things to keep in mind: 
 * Testing - Sanity-testing -- is the model working? does the data make sense? 
 * Foreign languages? -- figure out what that weird code is
 
