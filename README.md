@@ -1,7 +1,9 @@
-# Project drafts
-- The goal: Mine a sampling of Twitter public tweets and visually display on a single-page app.
+---
+published: false
+---
 
-- Optional: Dynamic real-time data (real-time), save queries & visualizations from users (CRUD) 
+# Project drafts
+- The goal: Mine a sampling of Twitter public tweets with a certain search query and visually display on a single-page app.
 
 -------------------------------
 
@@ -20,9 +22,9 @@ AFINN is a list of English words rated for valence with an integer between minus
 Others http://blog.mashape.com/post/48757031167/list-of-16-sentiment-analysis-apis
 
 Use cases:
-http://www.cs.washington.edu/education/courses/cse190p/12su/homework/hw5/homework5.html (compare NYC or CA, who Tweets about being happier or sadder?)
-https://election.twitter.com/ (real-time election stats comparisons - which candidate has more buzz?)
-http://jeffreybreen.wordpress.com/2011/07/04/twitter-text-mining-r-slides/
+- http://www.cs.washington.edu/education/courses/cse190p/12su/homework/hw5/homework5.html (compare NYC or CA, who Tweets about being happier or sadder?)
+- https://election.twitter.com/ (real-time election stats comparisons - which candidate has more buzz?)
+- http://jeffreybreen.wordpress.com/2011/07/04/twitter-text-mining-r-slides/
 (Text-mining Tweets and comparing it with airline sentiments and ratings - does Twitter sentiment correlate with airline satisfaction ratings?)
 http://ny.spatial.ly/ (What languages are people Tweeting in - in a city?)
 https://code.google.com/p/otterapi/wiki/UsesOtter
@@ -79,16 +81,17 @@ MINIMUM VIABLE PRODUCT:
 
 OPTIONAL FUNCTIONS:
 - Display an interactive bubble chart of the top words in tweets that have the word “Lakers” in it. Filter by parameters, like jQuery slider by time.
-------
+
+----------------------------------------
 
 ## Breaking it down: for Client / Server
 - Get query (for example, “Lakers” or “Prop 8 struck down”)
 - Get data of query 
 
-What data parameter options?
+#### What data parameter options?
 Data parameters: start/end date, language, geo-location, timezone,  #hashtags
 
-What analysis options & possibilities?
+#### What analysis options & possibilities?
 - Mine status update words to measure frequency of words by sentiment (What can we tell by the words people use on their Twitter statuses? Let’s measure overall Twitter sentiments by analyzing happy v. sad terms in a slice of tweets during a certain period of time.) 
 
 - Location by frequency of words by sentiment (We can also filter and compare by locations)
@@ -97,7 +100,7 @@ What analysis options & possibilities?
 
 - Analyze & display it:
 
-What display options?
+#### What display options?
 - For one data set: words + sentiments + frequency: A bubble chart with the top X number of the most frequently Tweeted words, where size of bubble indicates frequency and color of bubble indicates positive v. negative: http://bl.ocks.org/mbostock/4063269
 
 Example: What words are most popularly tweeted during a NBA Finals game? How happy / sad are the tweets?
@@ -105,7 +108,6 @@ Example: What words are most popularly tweeted during a NBA Finals game? How hap
 - For comparing sentiment frequency over time: sentiments + frequency + time: A stacked area chart with time along the X-axis and frequency along the Y-axis to compare how people’s Twitter status moods are changing over a given time period.
 
 Example: On Election day, compare tweets and sentiments as election results are reported. 
-
 
 # Things to keep in mind: 
 * Testing - Sanity-testing -- is the model working? does the data make sense? 
